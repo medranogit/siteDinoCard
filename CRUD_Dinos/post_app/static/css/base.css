@@ -63,6 +63,8 @@ nav .container, nav .logo {
   display: flex;
 }
 
+
+
 nav .container {
   width: calc(100% - 2px);
 }
@@ -99,6 +101,12 @@ nav .logo {
   padding: 1rem .8rem;
 }
 
+@media (max-width: 800px) {
+  nav .logo {
+      border-radius: 5px 0px 0 0;
+  }
+}
+
 nav ul {
   border-radius: 0 5px 5px 0;
   display: flex;
@@ -117,11 +125,16 @@ nav ul {
       padding: 16px;
       position: absolute;
       top: 99%;
-      width: 100%;
+      width: 101%;
       z-index: 500;
   }
 }
 
+@media (max-width: 800px) {
+  nav .container.active ul {
+      display: grid;
+  }
+}
 nav ul li a {
   color: var(--text-color);
   font-size: 16px;
