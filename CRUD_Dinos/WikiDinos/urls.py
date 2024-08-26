@@ -21,7 +21,9 @@ from django.urls import path, include  # Importa as funções para definir rotas
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Define a rota para o painel de administração do Django.
-    path('', include('post_app.urls')) #Incluindo todas as URLs no app 'post_app'.
+    path('dino/', include('post_app.urls')), #Incluindo todas as URLs no app 'post_app'.
+    path('wiki/', include('wikiApp.urls')) #Incluindo todas as URLs no app 'post_app'.
+
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)  # Adiciona a configuração para servir arquivos estáticos (CSS, JS, imagens) durante o desenvolvimento.
