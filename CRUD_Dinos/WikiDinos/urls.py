@@ -21,6 +21,7 @@ from django.urls import path, include  # Importa as funções para definir rotas
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # Define a rota para o painel de administração do Django.
+    path('', include('wikiApp.urls')), #Incluindo todas as URLs no app 'post_app'.
     path('dino/', include('post_app.urls')), #Incluindo todas as URLs no app 'post_app'.
     path('wiki/', include('wikiApp.urls')), #Incluindo todas as URLs no app 'post_app'.
 ]

@@ -1,14 +1,21 @@
-<!-- contas/templates/contas/registro.html -->
+<!-- wikiApp/templates/wikiApp/registro.html -->
 {% extends 'myApp/base.html' %}
 
 {% block title %}Registro{% endblock %}
+<!-- Define o título da página como 'Registro' -->
 
 {% block content %}
 <h2>Registrar</h2>
+<!-- Cabeçalho da seção de registro -->
+
 <form method="post">
     {% csrf_token %}
+    <!-- Adiciona o token CSRF para proteção contra ataques CSRF -->
     {{ form.as_p }}
+    <!-- Renderiza o formulário como parágrafos -->
     <button type="submit">Registrar</button>
+    <!-- Botão para enviar o formulário -->
 </form>
 <p>Já tem uma conta? <a href="{% url 'login' %}">Faça login aqui</a>.</p>
+<!-- Link para a página de login -->
 {% endblock %}
